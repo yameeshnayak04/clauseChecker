@@ -1,0 +1,278 @@
+[
+  {
+    "id": "q001",
+    "question": "What is the minimum attendance required to sit for an exam?",
+    "expected_state": "CONTRADICTION",
+    "expected_chunk_keywords": ["75%", "60%"],
+    "notes": "Contradiction #1: 75% vs 60%"
+  },
+  {
+    "id": "q002",
+    "question": "What is the penalty for paying tuition fees late?",
+    "expected_state": "CONTRADICTION",
+    "expected_chunk_keywords": ["5%", "2%"],
+    "notes": "Contradiction #2: 5% vs 2% per week"
+  },
+  {
+    "id": "q003",
+    "question": "Can overnight guests stay at the hostel?",
+    "expected_state": "CONTRADICTION",
+    "expected_chunk_keywords": ["no overnight stays", "guest rooms"],
+    "notes": "Contradiction #3: no overnight stays vs overnight guest rooms"
+  },
+  {
+    "id": "q004",
+    "question": "How does the university track student attendance?",
+    "expected_state": "ANSWERED",
+    "expected_chunk_keywords": ["digital", "ID card", "tracking"],
+    "notes": "Covered in attendance_policy.md Clause 2.2 — digital tracking system"
+  },
+  {
+    "id": "q005",
+    "question": "What are the medical absence documentation requirements?",
+    "expected_state": "ANSWERED",
+    "expected_chunk_keywords": ["medical", "absence"],
+    "notes": ""
+  },
+  {
+    "id": "q006",
+    "question": "When is the last date to pay tuition fees for the fall semester?",
+    "expected_state": "ANSWERED",
+    "expected_chunk_keywords": ["deadline", "tuition", "fee"],
+    "notes": "Covered in fee_deadlines_table.md — semester fee schedule"
+  },
+  {
+    "id": "q007",
+    "question": "What are the hostel guest visiting hours?",
+    "expected_state": "ANSWERED",
+    "expected_chunk_keywords": ["guest", "visiting"],
+    "notes": ""
+  },
+  {
+    "id": "q008",
+    "question": "What are the scholarship GPA requirements?",
+    "expected_state": "ANSWERED",
+    "expected_chunk_keywords": ["scholarship", "GPA"],
+    "notes": ""
+  },
+  {
+    "id": "q009",
+    "question": "What is the room allocation priority?",
+    "expected_state": "ANSWERED",
+    "expected_chunk_keywords": ["room", "allocation"],
+    "notes": ""
+  },
+  {
+    "id": "q010",
+    "question": "What is the fee refund timeline?",
+    "expected_state": "ANSWERED",
+    "expected_chunk_keywords": ["refund", "timeline"],
+    "notes": ""
+  },
+  {
+    "id": "q011",
+    "question": "What are the meal plan and dining rules for hostel residents?",
+    "expected_state": "ANSWERED",
+    "expected_chunk_keywords": ["meal plan", "dining", "rules"],
+    "notes": "Covered in hostel_handbook.md Section 4"
+  },
+  {
+    "id": "q012",
+    "question": "What are the scholarship renewal criteria?",
+    "expected_state": "ANSWERED",
+    "expected_chunk_keywords": ["renewal", "criteria"],
+    "notes": ""
+  },
+  {
+    "id": "q013",
+    "question": "What are the committee powers for attendance waivers?",
+    "expected_state": "ANSWERED",
+    "expected_chunk_keywords": ["committee", "waiver"],
+    "notes": ""
+  },
+  {
+    "id": "q014",
+    "question": "What items are strictly prohibited in the hostel rooms?",
+    "expected_state": "ANSWERED",
+    "expected_chunk_keywords": ["prohibited", "items", "hostel"],
+    "notes": "Covered in hostel_handbook.md Section 6"
+  },
+  {
+    "id": "q015",
+    "question": "What fee payment methods are accepted?",
+    "expected_state": "ANSWERED",
+    "expected_chunk_keywords": ["payment", "methods"],
+    "notes": ""
+  },
+  {
+    "id": "q016",
+    "question": "What are the scholarship application deadlines?",
+    "expected_state": "ANSWERED",
+    "expected_chunk_keywords": ["application", "deadline"],
+    "notes": ""
+  },
+  {
+    "id": "q017",
+    "question": "What is the hostel vacation policy?",
+    "expected_state": "ANSWERED",
+    "expected_chunk_keywords": ["vacation"],
+    "notes": ""
+  },
+  {
+    "id": "q018",
+    "question": "Is attendance calculated separately for lab sessions and lectures?",
+    "expected_state": "ANSWERED",
+    "expected_chunk_keywords": ["contact hours", "combined", "lectures"],
+    "notes": "Covered in attendance_policy.md Clause 3.2"
+  },
+  {
+    "id": "q019",
+    "question": "What happens if I miss the exam because of a family wedding?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q020",
+    "question": "Can I defer my semester for personal reasons?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q021",
+    "question": "What are the requirements for graduating with honors or cum laude?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": "Honors graduation is not covered anywhere in the corpus"
+  },
+  {
+    "id": "q022",
+    "question": "How do I apply for a semester exchange program?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q023",
+    "question": "What are the rules for changing my major?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q024",
+    "question": "Can I take courses from another department?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q025",
+    "question": "What is the anti-ragging policy?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q026",
+    "question": "What is the procedure for contesting an exam room seating assignment?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": "Exam room seating arrangements are not covered in the corpus"
+  },
+  {
+    "id": "q027",
+    "question": "What are the rules for part-time employment while enrolled?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q028",
+    "question": "Is there a dress code for campus?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q029",
+    "question": "What is the policy on plagiarism?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q030",
+    "question": "Can I bring a pet to the hostel?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q031",
+    "question": "What are the gym/sports facility hours?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q032",
+    "question": "How do I get a parking permit?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q033",
+    "question": "What is the policy on religious holidays?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q034",
+    "question": "Can day scholars purchase a daily hostel pass?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": "Day-passes for day scholars are not mentioned anywhere"
+  },
+  {
+    "id": "q035",
+    "question": "Does the university provide personal property theft insurance for student laptops?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": "Theft insurance is not covered in the corpus"
+  },
+  {
+    "id": "q036",
+    "question": "Is there a curfew for day scholars?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q037",
+    "question": "Can I use the library after hours?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q038",
+    "question": "What are the rules for organizing a campus event?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q039",
+    "question": "How do I apply for a teaching assistantship?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q040",
+    "question": "What is the policy on mental health leave?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q041",
+    "question": "Can I audit a course without enrolling?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q042",
+    "question": "What are the rules for using personal vehicles on campus?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  },
+  {
+    "id": "q043",
+    "question": "How do I file a complaint against a faculty member?",
+    "expected_state": "NOT_IN_CORPUS",
+    "notes": ""
+  }
+]

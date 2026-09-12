@@ -1,0 +1,639 @@
+{
+  "confidence_threshold": 0.0,
+  "overall_accuracy": 0.9767441860465116,
+  "state_accuracy": {
+    "ANSWERED": 1.0,
+    "NOT_IN_CORPUS": 1.0,
+    "CONTRADICTION": 0.6666666666666666
+  },
+  "confusion_matrix": {
+    "ANSWERED": {
+      "ANSWERED": 15,
+      "NOT_IN_CORPUS": 0,
+      "CONTRADICTION": 0
+    },
+    "NOT_IN_CORPUS": {
+      "ANSWERED": 0,
+      "NOT_IN_CORPUS": 25,
+      "CONTRADICTION": 0
+    },
+    "CONTRADICTION": {
+      "ANSWERED": 1,
+      "NOT_IN_CORPUS": 0,
+      "CONTRADICTION": 2
+    }
+  },
+  "results": [
+    {
+      "id": "q001",
+      "question": "What is the minimum attendance required to sit for an exam?",
+      "expected": "CONTRADICTION",
+      "predicted": "CONTRADICTION",
+      "correct": true,
+      "confidence": 0.98,
+      "raw_answer": "The policy contains conflicting statements about the minimum attendance required to sit for an exam. One provision states that students must maintain at least 75% attendance to be eligible for the end\u2011semester examination (Clause 3.1). Another provision allows students with documented medical absences to be eligible for examination provided they maintain a minimum of 60% attendance (Clause 5.2).",
+      "citations": [
+        {
+          "chunk_id": "chunk_0003",
+          "source_file": "attendance_policy.md",
+          "section_title": "3. Thresholds for Examination Eligibility"
+        },
+        {
+          "chunk_id": "chunk_0005",
+          "source_file": "attendance_policy.md",
+          "section_title": "5. Medical Absence Provisions"
+        }
+      ],
+      "reasoning_note": "Both chunks directly address the attendance threshold for exam eligibility but give different percentages (75% vs 60%), creating a direct conflict."
+    },
+    {
+      "id": "q002",
+      "question": "What is the penalty for paying tuition fees late?",
+      "expected": "CONTRADICTION",
+      "predicted": "ANSWERED",
+      "correct": false,
+      "confidence": 0.96,
+      "raw_answer": "The standard penalty for late tuition payment is a fee of 5% of the outstanding amount per week of delay. However, students who are enrolled in an approved Installment Payment Plan (IPP) are charged a lower late penalty of 2% of the outstanding amount per week for missed installment deadlines.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0015",
+          "source_file": "fee_deadlines_table.md",
+          "section_title": "4. Late Payment Penalties"
+        },
+        {
+          "chunk_id": "chunk_0017",
+          "source_file": "fee_deadlines_table.md",
+          "section_title": "6. Financial Hardship & Payment Plans"
+        }
+      ],
+      "reasoning_note": "Chunk 0015 directly states a 5% weekly late fee; chunk 0017 adds a specific 2% weekly penalty for IPP participants. Both statements are explicit and not contradictory, so the answer combines them."
+    },
+    {
+      "id": "q003",
+      "question": "Can overnight guests stay at the hostel?",
+      "expected": "CONTRADICTION",
+      "predicted": "CONTRADICTION",
+      "correct": true,
+      "confidence": 0.99,
+      "raw_answer": "The hostel regulations contain conflicting statements about overnight guests. Section 3.4 of the Guest & Visitor Policy (chunk_0024) states that all visitors must leave by 9:00\u202fPM and that no overnight stays by non\u2011residents are permitted under any circumstances. However, Section 8.4 of the Common Room & Recreation Facilities (chunk_0029) allows residents to host overnight guests in common\u2011area guest rooms with prior written approval from the Warden, provided the guest registers by 6:00\u202fPM and vacates by 11:00\u202fAM the next day.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0024",
+          "source_file": "hostel_handbook.md",
+          "section_title": "3. Guest & Visitor Policy"
+        },
+        {
+          "chunk_id": "chunk_0029",
+          "source_file": "hostel_handbook.md",
+          "section_title": "8. Common Room & Recreation Facilities"
+        }
+      ],
+      "reasoning_note": "Chunk 0024 bans all overnight stays, while chunk 0029 permits them with approval, creating a direct conflict."
+    },
+    {
+      "id": "q004",
+      "question": "How does the university track student attendance?",
+      "expected": "ANSWERED",
+      "predicted": "ANSWERED",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "The university tracks attendance through a digital attendance tracking system. Students swipe their authorized University ID card at card readers in each teaching venue within the first fifteen minutes of class, and for online or hybrid courses attendance is recorded via login to the learning management system, participation in live sessions, and completion of assessment tasks. Instructors may also perform manual checks to verify the digital records.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0002",
+          "source_file": "attendance_policy.md",
+          "section_title": "2. General Attendance Requirements"
+        }
+      ],
+      "reasoning_note": "Chunk 0002 explicitly describes the digital system and methods used to record attendance, directly answering the query."
+    },
+    {
+      "id": "q005",
+      "question": "What are the medical absence documentation requirements?",
+      "expected": "ANSWERED",
+      "predicted": "ANSWERED",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "Medical absence documentation must be a valid medical certificate issued by a registered medical practitioner. The certificate must clearly state the nature of the illness (where appropriate), the dates of recommended isolation or rest, and be submitted to the University Health Center for verification within five working days of the student\u2019s return to academic activities. The Health Center may reject certificates that are suspicious, improperly formatted, or issued by practitioners not recognized by the national medical council.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0005",
+          "source_file": "attendance_policy.md",
+          "section_title": "5. Medical Absence Provisions"
+        }
+      ],
+      "reasoning_note": "Chunk 0005 explicitly lists all documentation requirements for medical absences; no conflicting information found."
+    },
+    {
+      "id": "q006",
+      "question": "When is the last date to pay tuition fees for the fall semester?",
+      "expected": "ANSWERED",
+      "predicted": "ANSWERED",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "The tuition fees for the fall semester are due on August 15, 2026.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0013",
+          "source_file": "fee_deadlines_table.md",
+          "section_title": "2. Semester Fee Schedule and Important Dates"
+        }
+      ],
+      "reasoning_note": "Chunk 0013 explicitly lists the due date for the fall semester tuition as August 15, 2026, directly answering the question."
+    },
+    {
+      "id": "q007",
+      "question": "What are the hostel guest visiting hours?",
+      "expected": "ANSWERED",
+      "predicted": "ANSWERED",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "Hostel guests must vacate the premises by 9:00\u202fPM. No overnight stays by non\u2011residents are allowed, and during high\u2011stress periods (e.g., midterm or final exam weeks) a 24\u2011hour no\u2011guest policy may be imposed.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0024",
+          "source_file": "hostel_handbook.md",
+          "section_title": "3. Guest & Visitor Policy"
+        }
+      ],
+      "reasoning_note": "Chunk 0024 explicitly states the visitor departure time of 9:00\u202fPM, which directly answers the question about visiting hours."
+    },
+    {
+      "id": "q008",
+      "question": "What are the scholarship GPA requirements?",
+      "expected": "ANSWERED",
+      "predicted": "ANSWERED",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "Scholarship GPA requirements are as follows:\n- Merit\u2011based scholarships: applicants must have a minimum high\u2011school GPA of 3.8 (or equivalent) for entrance awards, and must maintain a cumulative university GPA of at least 3.5 for continuing student awards and for renewal of the scholarship.\n- Need\u2011based scholarships: there is no specific entry\u2011level GPA mentioned, but recipients must maintain a minimum cumulative GPA of 2.5 to satisfy renewal criteria.\nThese requirements are stated in the eligibility criteria and renewal conditions sections of the scholarship policy.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0040",
+          "source_file": "scholarship_policy.md",
+          "section_title": "3. Eligibility Criteria"
+        },
+        {
+          "chunk_id": "chunk_0042",
+          "source_file": "scholarship_policy.md",
+          "section_title": "5. Renewal Conditions"
+        }
+      ],
+      "reasoning_note": "The chunks explicitly list GPA thresholds for merit\u2011based (3.8 high\u2011school, 3.5 university) and need\u2011based (2.5 university) scholarships, with no contradictory statements."
+    },
+    {
+      "id": "q009",
+      "question": "What is the room allocation priority?",
+      "expected": "ANSWERED",
+      "predicted": "ANSWERED",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "Room allocation is handled annually with returning students placed in a lottery system during the Spring semester, while first\u2011year students are assigned rooms based on their application preferences and availability.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0023",
+          "source_file": "hostel_handbook.md",
+          "section_title": "2. Room Allocation and Occupancy Policy"
+        }
+      ],
+      "reasoning_note": "The chunk explicitly describes the allocation process, indicating the priority order for returning versus first\u2011year students."
+    },
+    {
+      "id": "q010",
+      "question": "What is the fee refund timeline?",
+      "expected": "ANSWERED",
+      "predicted": "ANSWERED",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "The university refunds tuition and fees according to a 16\u2011week schedule tied to the date of withdrawal:\u202f\u2022\u202fBefore the first day of classes \u2013 100% of tuition and 100% of fees are refunded.\u202f\u2022\u202fDuring Week\u202f1 (Add/Drop period) \u2013 100% of tuition and 100% of fees (except health\u2011insurance fees) are refunded.\u202f\u2022\u202fDuring Week\u202f2 \u2013 80% of tuition and 50% of fees are refunded.\u202f\u2022\u202fDuring Week\u202f3 \u2013 60% of tuition and 0% of fees are refunded.\u202f\u2022\u202fDuring Week\u202f4 \u2013 40% of tuition and 0% of fees are refunded.\u202f\u2022\u202fAfter Week\u202f4 \u2013 no tuition or fee refunds are provided.\u202fRoom and board charges are refunded on a daily prorated basis up to the end of Week\u202f4; after that no housing/dining refunds are issued.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0016",
+          "source_file": "fee_deadlines_table.md",
+          "section_title": "5. Refund Policies and Withdrawal Schedules"
+        }
+      ],
+      "reasoning_note": "Chunk 0016 explicitly lists the refund percentages by week, which directly answers the timeline question."
+    },
+    {
+      "id": "q011",
+      "question": "What are the meal plan and dining rules for hostel residents?",
+      "expected": "ANSWERED",
+      "predicted": "ANSWERED",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "Hostel residents must enroll in the university\u2019s mandatory meal plan, with exemptions only for severe, documented medical or religious dietary restrictions that cannot be accommodated. In the dining halls, proper attire is required (no pajamas, bare feet, or swimwear). Removing food, dishware, or cutlery is prohibited and considered theft, except for designated \u201cgrab\u2011and\u2011go\u201d items. Residents are expected to take only what they can eat to minimize waste; repeated excessive waste may trigger a formal warning. Sick\u2011tray service is available for ill residents who cannot visit the dining hall, provided they submit an online request or present an authorization note from the Resident Assistant.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0033",
+          "source_file": "hostel_handbook.pdf",
+          "section_title": "4. Mess and Dining Hall Rules"
+        },
+        {
+          "chunk_id": "chunk_0025",
+          "source_file": "hostel_handbook.md",
+          "section_title": "4. Mess and Dining Hall Rules"
+        }
+      ],
+      "reasoning_note": "The relevant chunks directly list the meal\u2011plan requirement and detailed dining\u2011hall rules, fully answering the query with no contradictions."
+    },
+    {
+      "id": "q012",
+      "question": "What are the scholarship renewal criteria?",
+      "expected": "ANSWERED",
+      "predicted": "ANSWERED",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "Scholarship renewal requires meeting several conditions: (1) Academic requirements \u2013 merit\u2011based recipients must keep a cumulative GPA of at least 3.5, while need\u2011based recipients must maintain a minimum GPA of 2.5; (2) Credit load \u2013 students must enroll in and successfully complete at least 12 credit hours each semester; (3) Attendance and conduct \u2013 students must have satisfactory attendance per the University Attendance Policy and must not incur disciplinary actions under the Code of Student Conduct; and (4) For athletic scholarships, recipients must stay in good standing with their team, actively participate in practices and competitions, and meet any sport\u2011specific GPA requirements.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0042",
+          "source_file": "scholarship_policy.md",
+          "section_title": "5. Renewal Conditions"
+        }
+      ],
+      "reasoning_note": "Chunk 0042 explicitly lists all renewal criteria; no conflicting information found."
+    },
+    {
+      "id": "q013",
+      "question": "What are the committee powers for attendance waivers?",
+      "expected": "ANSWERED",
+      "predicted": "ANSWERED",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "The Academic Standing Committee, chaired by the Provost, has the authority to waive attendance requirements entirely in exceptional circumstances (e.g., severe life\u2011threatening illnesses, national emergencies, or other extraordinary events). Its decisions are binding and final, and it may also impose conditions such as alternative academic exercises, additional assignments, or delayed assessment schedules when granting a waiver.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0007",
+          "source_file": "attendance_policy.md",
+          "section_title": "7. Committee Powers and Exceptional Circumstances"
+        }
+      ],
+      "reasoning_note": "Chunk 0007 explicitly outlines the committee's powers to waive attendance requirements and set conditions, directly answering the query."
+    },
+    {
+      "id": "q014",
+      "question": "What items are strictly prohibited in the hostel rooms?",
+      "expected": "ANSWERED",
+      "predicted": "ANSWERED",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "The handbook lists the following items as strictly prohibited in hostel rooms: firearms, explosives, fireworks, knives with blades longer than 3\u202finches (excluding kitchen knives in apartment\u2011style suites), candles, incense, space heaters, halogen lamps, and hoverboards. In addition, the possession, use, or distribution of illegal drugs, unauthorized prescription medications, drug paraphernalia, alcoholic beverages, empty alcohol containers, and brewing equipment are also forbidden.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0034",
+          "source_file": "hostel_handbook.pdf",
+          "section_title": "6. Disciplinary Code and Prohibited Items"
+        },
+        {
+          "chunk_id": "chunk_0027",
+          "source_file": "hostel_handbook.md",
+          "section_title": "6. Disciplinary Code and Prohibited Items"
+        }
+      ],
+      "reasoning_note": "Both chunk_0034 and chunk_0027 explicitly list the prohibited items, providing a direct answer with no contradictions."
+    },
+    {
+      "id": "q015",
+      "question": "What fee payment methods are accepted?",
+      "expected": "ANSWERED",
+      "predicted": "ANSWERED",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "The University accepts the following fee payment methods: Electronic Bank Transfer (ACH) via the secure student portal; Domestic and International Wire Transfers (with Student ID reference); Credit/Debit Cards (Visa, MasterCard, American Express) \u2013 note a 2.85% non\u2011refundable convenience fee applies; Official Certified Bank Checks or Money Orders payable to the University; Third\u2011party sponsor billing (e.g., government agencies, corporate sponsors, military benefits) with required sponsorship letters; Personal checks (subject to a $50 NSF fee and possible future refusal); and Cash payments are prohibited if they exceed $10,000.00.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0014",
+          "source_file": "fee_deadlines_table.md",
+          "section_title": "3. Accepted Payment Methods"
+        }
+      ],
+      "reasoning_note": "Chunk 0014 explicitly lists all accepted payment methods, directly answering the query with no conflicting information."
+    },
+    {
+      "id": "q016",
+      "question": "What are the scholarship application deadlines?",
+      "expected": "ANSWERED",
+      "predicted": "ANSWERED",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "The scholarship application cycle opens on October\u202f1st and closes on March\u202f1st for the upcoming academic year.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0041",
+          "source_file": "scholarship_policy.md",
+          "section_title": "4. Application Process"
+        }
+      ],
+      "reasoning_note": "Chunk 0041 explicitly states the opening and closing dates for scholarship applications, directly answering the question."
+    },
+    {
+      "id": "q017",
+      "question": "What is the hostel vacation policy?",
+      "expected": "ANSWERED",
+      "predicted": "ANSWERED",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "The hostel vacation policy states that all traditional dormitories close during the Winter and Summer breaks. Residents must vacate their rooms within 24\u202fhours of their last final examination. During the brief Winter break, residents may leave their belongings in the room if they will return to the same room for the Spring semester, but the university assumes no liability for any items left behind. Access to rooms is prohibited during break closures and card access will be deactivated. A limited number of \u201cBreak Housing\u201d accommodations are available for international students, athletes in season, or students with extreme travel hardships; this option incurs an additional daily fee and may require temporary relocation to a consolidated building.",
+      "citations": [
+        {
+          "chunk_id": "chunk_0028",
+          "source_file": "hostel_handbook.md",
+          "section_title": "7. Vacation and Semester Break Policy"
+        }
+      ],
+      "reasoning_note": "Chunk 0028 explicitly outlines the vacation and semester break policy for the hostel, directly answering the query."
+    },
+    {
+      "id": "q018",
+      "question": "Is attendance calculated separately for lab sessions and lectures?",
+      "expected": "ANSWERED",
+      "predicted": "ANSWERED",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "Attendance is not calculated separately for lab sessions and lectures; the attendance percentage is computed on the total scheduled contact hours for the course, combining lectures, tutorials, and laboratory sessions (unless a specific course syllabus states otherwise).",
+      "citations": [
+        {
+          "chunk_id": "chunk_0003",
+          "source_file": "attendance_policy.md",
+          "section_title": "3. Thresholds for Examination Eligibility"
+        }
+      ],
+      "reasoning_note": "Chunk 0003 explicitly states attendance is calculated on combined contact hours, directly answering the question."
+    },
+    {
+      "id": "q019",
+      "question": "What happens if I miss the exam because of a family wedding?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "No chunk explicitly mentions family wedding absences; therefore the question is not covered by the corpus."
+    },
+    {
+      "id": "q020",
+      "question": "Can I defer my semester for personal reasons?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.95,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "No chunk directly mentions semester deferral; the topics are unrelated, so the query is not covered by the corpus."
+    },
+    {
+      "id": "q021",
+      "question": "What are the requirements for graduating with honors or cum laude?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.95,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "None of the chunks mention graduation honors or cum laude requirements; they focus solely on scholarship policies."
+    },
+    {
+      "id": "q022",
+      "question": "How do I apply for a semester exchange program?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.95,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "No chunk directly addresses the exchange program application process; related chunks discuss scholarships and fees only."
+    },
+    {
+      "id": "q023",
+      "question": "What are the rules for changing my major?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.95,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "The only available chunk discusses scholarship provisions and contains no mention of major change policies."
+    },
+    {
+      "id": "q024",
+      "question": "Can I take courses from another department?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.95,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "No chunk directly answers the question about taking courses from another department; the only chunk relates to scholarships and unrelated topics."
+    },
+    {
+      "id": "q025",
+      "question": "What is the anti-ragging policy?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 1.0,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "All provided chunks are below the similarity threshold."
+    },
+    {
+      "id": "q026",
+      "question": "What is the procedure for contesting an exam room seating assignment?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.96,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "No chunk mentions exam room seating assignments or related contest procedures; thus the query is not covered by the corpus."
+    },
+    {
+      "id": "q027",
+      "question": "What are the rules for part-time employment while enrolled?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.95,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "No chunk mentions part\u2011time employment; the query is unrelated to the attendance and fee topics present in the corpus."
+    },
+    {
+      "id": "q028",
+      "question": "Is there a dress code for campus?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.94,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "The chunks address attire rules only for dining halls, not a general campus dress code, so the specific question is not covered."
+    },
+    {
+      "id": "q029",
+      "question": "What is the policy on plagiarism?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 1.0,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "All provided chunks are below the similarity threshold."
+    },
+    {
+      "id": "q030",
+      "question": "Can I bring a pet to the hostel?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.95,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "No chunk explicitly addresses pet policies; the corpus only discusses guests, rooms, and facilities, so the question is not covered."
+    },
+    {
+      "id": "q031",
+      "question": "What are the gym/sports facility hours?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.95,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "The only available chunk discusses hostel common areas and laundry rooms, with no mention of gym or sports facility hours."
+    },
+    {
+      "id": "q032",
+      "question": "How do I get a parking permit?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 1.0,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "All provided chunks are below the similarity threshold."
+    },
+    {
+      "id": "q033",
+      "question": "What is the policy on religious holidays?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 1.0,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "All provided chunks are below the similarity threshold."
+    },
+    {
+      "id": "q034",
+      "question": "Can day scholars purchase a daily hostel pass?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.95,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "None of the retrieved chunks mention day scholars or daily passes; they only cover room allocation, common areas, and guest policies."
+    },
+    {
+      "id": "q035",
+      "question": "Does the university provide personal property theft insurance for student laptops?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.94,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "No chunk directly mentions personal property theft insurance for laptops; related sections only note lack of liability for left items, which does not explicitly answer the insurance question."
+    },
+    {
+      "id": "q036",
+      "question": "Is there a curfew for day scholars?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.95,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "No chunk references day scholars or curfew policies; thus the query is not covered by the corpus."
+    },
+    {
+      "id": "q037",
+      "question": "Can I use the library after hours?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.95,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "None of the supplied chunks mention library usage or its hours; they only discuss hostel facilities and attendance/absence procedures."
+    },
+    {
+      "id": "q038",
+      "question": "What are the rules for organizing a campus event?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.93,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "None of the chunks mention campus event organization; they are limited to residential and facility-specific guidelines."
+    },
+    {
+      "id": "q039",
+      "question": "How do I apply for a teaching assistantship?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.95,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "No chunk addresses teaching assistantship applications; the only chunk relates to scholarship eligibility."
+    },
+    {
+      "id": "q040",
+      "question": "What is the policy on mental health leave?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 1.0,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "All provided chunks are below the similarity threshold."
+    },
+    {
+      "id": "q041",
+      "question": "Can I audit a course without enrolling?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.95,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "No chunk mentions auditing or the ability to attend a course without formal enrollment; thus the query is not covered by the corpus."
+    },
+    {
+      "id": "q042",
+      "question": "What are the rules for using personal vehicles on campus?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.95,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "None of the chunks mention personal vehicle policies; they focus on hostel rules and safety, so the query is not covered by the corpus."
+    },
+    {
+      "id": "q043",
+      "question": "How do I file a complaint against a faculty member?",
+      "expected": "NOT_IN_CORPUS",
+      "predicted": "NOT_IN_CORPUS",
+      "correct": true,
+      "confidence": 0.95,
+      "raw_answer": "This question is not covered by the academic regulations in our corpus. Please contact the relevant university department for assistance.",
+      "citations": [],
+      "reasoning_note": "No chunk explicitly describes the process for filing a complaint against a faculty member; the corpus only covers attendance, fee, and scholarship appeals."
+    }
+  ]
+}
