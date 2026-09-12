@@ -1,0 +1,29 @@
+# Environment
+.env
+
+# Qdrant local persistence
+qdrant_data/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Models cache
+models/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# HLD-LLD spec (not part of deliverable)
+architecture.md
